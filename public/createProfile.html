@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <style>
+      .wrapper {
+        width: 960px;
+        margin: 0 auto;
+      }
+
+      header {
+        width: 960px;
+      }
+
+      nav,
+      section {
+        float: left;
+      }
+
+      nav {
+        width: 200px;
+        margin-right: 10px;
+      }
+
+      section {
+        width: 750px;
+      }
+
+      *,
+      *:before,
+      *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #2980b9;
+        color: #fff;
+        font-family: Helvetica;
+        text-align: center;
+        margin: 0;
+      }
+
+      header,
+      nav,
+      section {
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        margin-bottom: 10px;
+        border-radius: 3px;
+      }
+
+      header {
+        padding: 20px 0;
+        text-align: center;
+        background-color: green;
+      }
+
+      section {
+        padding: 200px 0;
+        width: 100%;
+        background-color: white;
+      }
+      h1 {
+        font-family: "Times New Roman", Times, serif;
+      }
+      h3 {
+        color: black;
+      }
+      img {
+        margin-bottom: 50px;
+        margin-left: 20px;
+      }
+      #inputDiv {
+        background-color: lightgreen;
+        border: 1px solid;
+        border-color: black;
+        margin-right: 250px;
+        margin-left: 250px;
+        height: 400px;
+      }
+      /* input[type="text"] {
+        margin-top: 70px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+      input[type="password"] {
+        margin-left: 10px;
+        border-radius: 5px;
+      }
+      input[type="submit"] {
+        background-color: white;
+        padding: 5px;
+        font-size: 13px;
+        margin-left: 100px;
+      } */
+      span {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- jquery and javascript packages -->
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <div class="wrapper">
+      <header>
+        <h1>Pharmacy Management System</h1>
+      </header>
+
+      <section>
+        <div>
+          <img
+            src="./images/pharmacyLogo.jpg"
+            height="350px"
+            width="550px"
+            alt="E-learning Logo"
+          />
+          <h3>Welcome to the Pharmacy Management System</h3>
+        </div>
+        <br />
+        <br />
+        <br />
+
+        <!-- The Bootstrap Form Template -->
+        <div id="inputDiv">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="first Name"
+              id="fn"
+              style="margin-left: 100px; margin-right: 100px; margin-top: 20px"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="last Name"
+              id="ln"
+              style="margin-left: 100px; margin-right: 100px"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="employee ID"
+              id="emp_id"
+              style="margin-left: 100px; margin-right: 100px"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Username"
+              id="us"
+              style="margin-left: 100px; margin-right: 100px"
+            />
+          </div>
+
+          <div class="input-group mb-3">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              id="ps"
+              style="margin-left: 100px; margin-right: 100px"
+            />
+          </div>
+
+          <button type="button" class="signUp btn btn-success">Sign Up</button>
+        </div>
+      </section>
+    </div>
+    <script src="./createProfile.js"></script>
+    <script>
+      //   var fname = $("#fn");
+      //   var lname = $("#ln");
+      //   var employeeID = $("#emp_id");
+      //   var userName = $("#us");
+      //   var passWord = $("#ps");
+
+      //   $(".signUpBtn").on("click", function () {
+      //     alert("sign up button is working");
+
+      //     var xml = new XMLHttpRequest();
+
+      //     xml.onload = function () {
+      //       var resp = this.responseText.toString();
+
+      //       if (resp == "account created and inserted into the database") {
+      //         alert("account has been created");
+      //       } else {
+      //         alert("account NOT CREATED");
+      //       }
+      //     };
+
+      //     xml.open("POST", "createProfile.php", true);
+      //     xml.setRequestHeader(
+      //       "Content-Type",
+      //       "application/x-www-form-urlencoded"
+      //     );
+
+      //     xml.send(
+      //       "firstName=" +
+      //         fname +
+      //         "&lastName=" +
+      //         lname +
+      //         "&empID=" +
+      //         employeeID +
+      //         "&user=" +
+      //         userName +
+      //         "&pass=" +
+      //         passWord
+      //     );
+      //   });
+    </script>
+  </body>
+</html>

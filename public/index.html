@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <style>
+      .wrapper {
+        width: 960px;
+        margin: 0 auto;
+      }
+
+      header {
+        width: 960px;
+      }
+
+      nav,
+      section {
+        float: left;
+      }
+
+      nav {
+        width: 200px;
+        margin-right: 10px;
+      }
+
+      section {
+        width: 750px;
+      }
+
+      *,
+      *:before,
+      *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #2980b9;
+        color: #fff;
+        font-family: Helvetica;
+        text-align: center;
+        margin: 0;
+      }
+
+      header,
+      nav,
+      section {
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        margin-bottom: 10px;
+        border-radius: 3px;
+      }
+
+      header {
+        padding: 20px 0;
+        text-align: center;
+        background-color: green;
+      }
+
+      section {
+        padding: 200px 0;
+        width: 100%;
+        background-color: white;
+      }
+      h1 {
+        font-family: "Times New Roman", Times, serif;
+      }
+      h3 {
+        color: black;
+      }
+      img {
+        margin-bottom: 50px;
+        margin-left: 20px;
+      }
+      #inputDiv {
+        background-color: lightgreen;
+        border: 1px solid;
+        border-color: black;
+        margin-right: 250px;
+        margin-left: 250px;
+        height: 250px;
+      }
+      /* input[type="text"] {
+        margin-top: 70px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+      }
+      input[type="password"] {
+        margin-left: 10px;
+        border-radius: 5px;
+      }
+      input[type="submit"] {
+        background-color: white;
+        padding: 5px;
+        font-size: 13px;
+        margin-left: 100px;
+      } */
+      span {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- jquery and javascript packages -->
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <div class="wrapper">
+      <header>
+        <h1>Pharmacy Management System</h1>
+      </header>
+
+      <section>
+        <div>
+          <img
+            src="./images/pharmacyLogo.jpg"
+            height="350px"
+            width="550px"
+            alt="E-learning Logo"
+          />
+          <h3>Welcome to the Pharmacy Management System</h3>
+        </div>
+        <br />
+        <br />
+        <br />
+
+        <!-- The Bootstrap Form Template -->
+        <div id="inputDiv">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Username"
+              id="userN"
+              style="margin-left: 100px; margin-right: 100px; margin-top: 40px"
+            />
+          </div>
+
+          <div class="input-group mb-3">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="Password"
+              id="passW"
+              style="margin-left: 100px; margin-right: 100px"
+            />
+          </div>
+
+          <button
+            onclick="login()"
+            type="button"
+            class="addBtn btn btn-success"
+          >
+            Login
+          </button>
+          <button type="button" class="signUpBtn btn btn-success">
+            Sign Up
+          </button>
+        </div>
+      </section>
+    </div>
+    <!-- <script src="./createProfile.js"></script> -->
+    <script src="./operations.js"></script>
+    <script>
+      // the JSON Array Used for Log In based on the current registered Users.
+      var myAcc = [
+        {
+          username: "Diyako",
+          password: "Diyako123",
+        },
+        {
+          username: "Bawan",
+          password: "Bawan456",
+        },
+        {
+          username: "Muhammed",
+          password: "Muhammed432",
+        },
+        {
+          username: "Mzhda",
+          password: "Mzhda876",
+        },
+      ];
+
+      // var user = $("#us");
+      // var pass = $("#ps");
+
+      // $(".addBtn").on("click", function () {
+      //   if (
+      //     user.val() == myAcc[0]["username"] &&
+      //     pass.val() == myAcc[0]["password"]
+      //   ) {
+      //     window.location = "home.html";
+      //   } else if (
+      //     user.val() == myAcc[1]["username"] &&
+      //     pass.val() == myAcc[1]["password"]
+      //   ) {
+      //     window.location = "home.html";
+      //   } else if (
+      //     user.val() == myAcc[2]["username"] &&
+      //     pass.val() == myAcc[2]["password"]
+      //   ) {
+      //     window.location = "home.html";
+      //   } else if (
+      //     user.val() == myAcc[3]["username"] &&
+      //     pass.val() == myAcc[3]["password"]
+      //   ) {
+      //     window.location = "home.html";
+      //   } else {
+      //     alert("you have inserted the wrong username and password");
+      //     window.location.href = "index.html";
+      //   }
+      // });
+      $(".signUpBtn").on("click", function () {
+        alert(
+          "you shall be redirected to the sign up page to create an account"
+        );
+        window.location.href = "createProfile.html";
+      });
+    </script>
+  </body>
+</html>

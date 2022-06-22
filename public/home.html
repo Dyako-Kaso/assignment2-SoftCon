@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <style>
+      .wrapper {
+        width: 960px;
+        margin: 0 auto;
+      }
+
+      header {
+        width: 960px;
+      }
+      nav,
+      section {
+        float: left;
+      }
+
+      nav {
+        width: 200px;
+        margin-right: 10px;
+      }
+
+      section {
+        width: 750px;
+        padding: 200px 0;
+        height: 700px;
+      }
+
+      *,
+      *:before,
+      *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #2980b9;
+        color: #fff;
+        font-family: Helvetica;
+        text-align: center;
+        margin: 0;
+      }
+
+      header,
+      nav,
+      section {
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        margin-bottom: 10px;
+        border-radius: 3px;
+      }
+
+      header {
+        padding: 20px 0;
+        text-align: left;
+        background-color: green;
+        text-align: center;
+      }
+
+      nav,
+      section {
+        background-color: lightskyblue;
+        height: 800px;
+      }
+      h1 {
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      /* the transition we learned it from the first example that was shared on week 1 of elearning (webTechnology) */
+      h3 {
+        background-color: white;
+        color: black;
+        height: 100px;
+        padding-top: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 20px;
+        transition: 0.4s;
+      }
+      h3:hover {
+        background-color: lightseagreen;
+        height: 120px;
+        padding-top: 45px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- jquery and javascript packages -->
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <div class="wrapper">
+      <header>
+        <h1>Pharmacy Management System</h1>
+      </header>
+      <nav>
+        <div>
+          <!-- bootstrap logout button -->
+          <p style="margin-top: 10px">
+            <a href="./index.html" class="btn btn-success btn-lg"> Log Out</a>
+          </p>
+          <h3 id="showMed">show the current Inventory</h3>
+          <h3 id="addMed">Add Medicine to the Inventory</h3>
+          <h3 id="delMed">delete Medicine in the Inventory</h3>
+          <h3 id="updMed">update Medicine in the Inventory</h3>
+          <h3 id="genReport">Generate Weekly Report</h3>
+          <h3 id="takeOrder">Take Customer Order</h3>
+        </div>
+      </nav>
+      <section>
+        <h2
+          style="
+            border: 1px solid;
+            margin: 5px;
+            border-radius: 15px;
+            border-width: 3px;
+            border-color: green;
+            padding: 10px;
+            background-color: green;
+          "
+        >
+          Welcome to the Pharmacy Management System to use our system please
+          select an operation on the left
+        </h2>
+      </section>
+    </div>
+    <script src="./operations.js"></script>
+    <script>
+      $("#showMed").on("click", function () {
+        window.location.href = "showMed.html";
+      });
+
+      $("#addMed").on("click", function () {
+        window.location.href = "addMed.html";
+      });
+
+      $("#delMed").on("click", function () {
+        window.location.href = "delMed.html";
+      });
+
+      $("#updMed").on("click", function () {
+        window.location.href = "updMed.html";
+      });
+
+      $("#genReport").on("click", function () {});
+
+      $("#takeOrder").on("click", function () {
+        window.location.href = "takeCustOrder.html";
+      });
+    </script>
+  </body>
+</html>
